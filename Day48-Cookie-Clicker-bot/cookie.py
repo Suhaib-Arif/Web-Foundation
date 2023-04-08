@@ -1,8 +1,9 @@
 import selenium
 from selenium.webdriver.chrome.service import Service
 from selenium import webdriver
+import os
 
-execution_path="C:/Users/Imad/PycharmProjects/chromedriver_win32/chromedriver"
+execution_path=os.environ['PATH']
 ser=Service(executable_path=execution_path)
 driver=webdriver.Chrome(service=ser)
 import time
