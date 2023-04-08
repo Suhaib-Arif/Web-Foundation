@@ -19,19 +19,19 @@ while time.time() < total:
         if money >= int(driver.find_element('css selector','#buyMine b').text.split(" - ")[1].replace(',',"")):
             Mine = driver.find_element('xpath', '//*[@id="buyMine"]')
             Mine.click()
-            timeout+=5
+     
         elif money >= int(driver.find_element('css selector','#buyFactory b').text.split(" - ")[1].replace(',','')):
             Buy = driver.find_element('xpath', '//*[@id="buyFactory"]')
             Buy.click()
-            timeout+=5
+      
         elif money >= int(driver.find_element('css selector','#buyGrandma b').text.split(" - ")[1].replace(',','')):
             Buy = driver.find_element('xpath', '//*[@id="buyGrandma"]')
             Buy.click()
-            timeout+=5
+ 
         elif money >= int(driver.find_element('css selector','#buyCursor b').text.split(" - ")[1].replace(',','')):
             Buy = driver.find_element('xpath', '//*[@id="buyCursor"]')
             Buy.click()
-            timeout+=5
+        timeout+=5
 
 
 time.sleep(7)
