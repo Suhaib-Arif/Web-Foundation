@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Login</title>
+	</head>
+	<body>
+        <div class="container">
+		<h1>Login</h1>
+        	<form method="post" action="/login" novalidate>
+				<p>
+					{{forms.email.label}} <br> {{forms.email}}
+						{% for error in forms.email.errors %}
+							<span>{{  error }}</span>
+						{% endfor %}
+				</p>
+				<p>
+					{{forms.password.label}} <br> {{forms.password}}
+							{% for error in forms.password.errors %}
+									<span>{{ error }}</span>
+							{% endfor %}
+				</p>
+				{{forms.submit}}
+			</form>
+        </div>
+	</body>
+</html>
